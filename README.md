@@ -10,7 +10,7 @@ updated_at timestamp NOT NULL,
 CONSTRAINT contacts_pkey PRIMARY KEY (id)
 );
 
-Create a contact
+# Create a contact
 curl --location 'http://localhost:8086/api/v1/contacts' \
 --header 'Content-Type: application/json' \
 --data '{
