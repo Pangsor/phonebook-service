@@ -18,13 +18,13 @@ curl --location 'http://localhost:8086/api/v1/contacts' \
 "phone":"08323456789"
 }'
 
-Get a contact
+# Get a contact
 curl --location 'http://localhost:8086/api/v1/contacts/1'
 
-Get all contact
+# Get all contact
 curl --location 'http://localhost:8086/api/v1/contacts'
 
-Update a contact
+# Update a contact
 curl --location --request PUT 'http://localhost:8086/api/v1/contacts/1' \
 --header 'Content-Type: application/json' \
 --data '{
@@ -32,5 +32,5 @@ curl --location --request PUT 'http://localhost:8086/api/v1/contacts/1' \
 "phone":"083234567899"
 }'
 
-Delete a contact
+# Delete a contact
 curl --location --request DELETE 'http://localhost:8086/api/v1/contacts/1'
