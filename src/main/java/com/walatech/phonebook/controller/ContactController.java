@@ -48,4 +48,10 @@ public class ContactController {
         contactService.deleteContact(contactId);
         return new ResponseEntity<>("Phone successfully deleted",HttpStatus.OK);
     }
+
+    @GetMapping("/name/{name}")
+    public ResponseEntity<List<ContactDto>> getContactsByName(@PathVariable("name") String name){
+        List<ContactDto> contactDtoList = contactService.getContactByName(name);
+        return new ResponseEntity<>(contactDtoList,HttpStatus.OK);
+    }
 }

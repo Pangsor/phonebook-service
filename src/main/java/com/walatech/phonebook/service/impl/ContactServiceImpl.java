@@ -67,4 +67,11 @@ public class ContactServiceImpl implements ContactService {
         );
         contactRepository.deleteById(contactId);
     }
+
+    @Override
+    public List<ContactDto> getContactByName(String name) {
+        List<Contact> contactList = contactRepository.findContactByName(name);
+        return contactList.stream().map((movie) -> modelMapper.map(movie,ContactDto.class))
+                .collect(Collectors.toList());
+    }
 }
