@@ -35,3 +35,6 @@ curl --location --request PUT 'http://localhost:8086/api/v1/contacts/1' \
 
 # Delete a contact
 curl --location --request DELETE 'http://localhost:8086/api/v1/contacts/1'
+
+# Get contacts by name
+curl --location 'http://localhost:8086/api/v1/contacts/name/Valen'
